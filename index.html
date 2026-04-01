@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGH Procurement Calculator</title>
+    <meta name="description" content="A fast, reliable, clean calculator for BGH Procurement Administration.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Using a modern font for a clean, professional aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="calculator-container">
+        <!-- Semantic header for context -->
+        <header class="calculator-header">
+            <h1>BGH Procurement</h1>
+            <p>Standard Operations Calculator</p>
+        </header>
+
+        <!-- The main calculator body -->
+        <section class="calculator">
+            <!-- Read-only display input -->
+            <div class="display-container">
+                <!-- Using an input element styled as read-only or a simple div. Let's use a div for textContent updates as requested -->
+                <div id="calculator-display" class="display" aria-live="polite">0</div>
+            </div>
+
+            <!-- The keypad container where we will attach the SINGLE event listener for Event Delegation -->
+            <div id="keypad" class="keypad">
+                <!-- Data attributes to identify the type of key -->
+                <button type="button" class="btn btn-action" data-action="clear">AC</button>
+                <button type="button" class="btn btn-action" data-action="delete">DEL</button>
+                <button type="button" class="btn btn-operator" data-action="operator" data-value="%">%</button>
+                <button type="button" class="btn btn-operator" data-action="operator" data-value="/">÷</button>
+                
+                <button type="button" class="btn btn-number" data-value="7">7</button>
+                <button type="button" class="btn btn-number" data-value="8">8</button>
+                <button type="button" class="btn btn-number" data-value="9">9</button>
+                <button type="button" class="btn btn-operator" data-action="operator" data-value="*">×</button>
+                
+                <button type="button" class="btn btn-number" data-value="4">4</button>
+                <button type="button" class="btn btn-number" data-value="5">5</button>
+                <button type="button" class="btn btn-number" data-value="6">6</button>
+                <button type="button" class="btn btn-operator" data-action="operator" data-value="-">−</button>
+                
+                <button type="button" class="btn btn-number" data-value="1">1</button>
+                <button type="button" class="btn btn-number" data-value="2">2</button>
+                <button type="button" class="btn btn-number" data-value="3">3</button>
+                <button type="button" class="btn btn-operator" data-action="operator" data-value="+">+</button>
+                
+                <button type="button" class="btn btn-number btn-zero" data-value="0">0</button>
+                <button type="button" class="btn btn-number" data-value=".">.</button>
+                <button type="button" class="btn btn-equal" data-action="calculate">=</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
